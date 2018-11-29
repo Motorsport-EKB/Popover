@@ -216,6 +216,7 @@ open class Popover: UIView {
 
   override open func draw(_ rect: CGRect) {
     super.draw(rect)
+    guard arrowSize != .zero else { return }
     let arrow = UIBezierPath()
     let color = self.popoverColor
     let arrowPoint = self.containerView.convert(self.arrowShowPoint, to: self)
